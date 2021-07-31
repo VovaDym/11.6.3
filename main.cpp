@@ -2,21 +2,21 @@
 #include <string>
 int n(std::string part)
 {
-    int digit = 0;
+    int number = 0;
     for(int i = 0; i < part.length(); ++i)
     {
-        digit += part[i] -'0';
-        digit *= 10;
+        int digit = part[i] -'0';
+        number = number * 10 + digit;
     }
-    return digit / 10;
+    return number;
 }
 
 int main() {
     std::string ip;
-    std::string part = "";
-    std::string part2 = "";
-    std::string part3 = "";
-    std::string part4 = "";
+    std::string part;
+    std::string part2;
+    std::string part3;
+    std::string part4;
     std::cout << "Enter the ip address!" << std::endl;
     std::cin >> ip ;
     if(ip[ip.length() - 1] == '.')
