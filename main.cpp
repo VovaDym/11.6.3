@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-int n(std::string part)
+int n(std::string part) // the function of converting a string to a number;
 {
     int number = 0;
     for(int i = 0; i < part.length(); ++i)
@@ -10,7 +10,7 @@ int n(std::string part)
     }
     return number;
 }
-bool correct (std::string part)
+bool correct (std::string part) //the function of the correctness of characters in parts;
 {
     bool correct;
     for (int i = 0; i < part.length(); ++i)
@@ -43,7 +43,7 @@ int main()
         int pos2 = 0;
         int pos3 = 0;
         int dot = 0;
-        bool points = false;
+        bool points = false; // if the points are not consecutive;
         for (int i = 0;i < ip.length();i++)
         {
             if ( ip[i] == '.' && ip[i + 1] == '.')
