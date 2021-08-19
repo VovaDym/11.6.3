@@ -10,7 +10,7 @@ int n(std::string part) // the function of converting a string to a number;
     }
     return number;
 }
-bool correct (std::string part) //the function of the correctness of characters in parts;
+bool correct (std::string part) // the function of the correctness of characters in parts;
 {
     bool correct;
     for (int i = 0; i < part.length(); ++i)
