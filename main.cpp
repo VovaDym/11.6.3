@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-int n(std::string part) // the function of converting a string to a number;
+int strToNum(std::string part) // the function of converting a string to a number;
 {
     int number = 0;
     for(int i = 0; i < part.length(); ++i)
@@ -10,6 +10,7 @@ int n(std::string part) // the function of converting a string to a number;
     }
     return number;
 }
+
 bool correct (std::string part) // the function of the correctness of characters in parts;
 {
     bool correct;
@@ -28,6 +29,7 @@ bool correct (std::string part) // the function of the correctness of characters
     }
     return correct;
 }
+
 int main()
 {
     std::string ip;
@@ -73,8 +75,9 @@ int main()
             std::string part2 = ip.substr(pos + 1,pos2 - (pos + 1));
             std::string part3 = ip.substr(pos2 + 1,pos3 - (pos2 +1));
             std::string part4 = ip.substr(pos3 + 1,ip.length() - (pos3 +1));
-            if(n(part) <= 255 &&correct(part) && n(part2) <= 255  && correct(part2)
-            && n(part3) <= 255 && correct(part3) && n(part4) <= 255 && correct(part4))
+            if((correct(part) && strToNum(part) <= 255 && correct(part2)
+                && strToNum(part2) <= 255 && correct(part3) && strToNum(part3) <= 255
+                && correct(part4) && strToNum(part4) <= 255) && dot == 3)
             {
                 std::cout << "Yes";
             }
